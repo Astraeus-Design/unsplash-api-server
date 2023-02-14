@@ -19,6 +19,7 @@ async function getImages(request, response, next) {
 
   try {
     if (request.query !== undefined && request.query !== null) {
+      // not needed with new middleware checks in place but will leave for time being
       if ("query" in request.query) {
         console.log(request.query.query);
         const digiUrl = `https://api.unsplash.com/search/photos/?client_id=${

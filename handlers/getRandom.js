@@ -1,4 +1,4 @@
-const aios = require("axios");
+const axios = require("axios");
 
 // image object class for use in returning object arrays to client
 
@@ -8,7 +8,9 @@ class imgObj {
     this.imageUrl = inputObj.urls.regular;
     this.description = inputObj.description;
   }
-} // route handler for random photo acquisition
+}
+
+// route handler for random photo acquisition
 
 async function getRandom(request, response, next) {
   //let digiUrl = `https://api.unsplash.com/search/photos/?client_id=${process.env.UNSPLASH_KEY1}&query=cat`;
