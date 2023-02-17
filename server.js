@@ -31,3 +31,7 @@ app.use(errorHandler); // final catchall error routine
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
+
+module.exports = {
+  app: app,
+};

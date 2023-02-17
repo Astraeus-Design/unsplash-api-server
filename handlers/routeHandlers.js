@@ -38,7 +38,7 @@ async function getImages(request, response, next) {
     //response.status(500).send("error in request for images");
   }
 }
-module.exports = getImages;
+//module.exports = getImages;
 
 // route handler for random photo acquisition
 
@@ -65,7 +65,7 @@ async function getRandom(request, response, next) {
   }
 }
 
-module.exports = getRandom;
+//module.exports = getRandom;
 
 // route handler for wildcard routes, i.e those not existing
 
@@ -73,4 +73,4 @@ function wildCards(request, response) {
   response.status(404).send("file not found");
 }
 
-module.exports = wildCards;
+module.exports = { wildCards, getRandom, getImages };
